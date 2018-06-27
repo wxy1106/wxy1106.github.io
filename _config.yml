@@ -1,11 +1,11 @@
-# Hexo Configuration
+﻿# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
 title: XYBLOG
 subtitle: blog of nebula
-description: 天堂有路你不走，学海无涯苦作舟
+description: 天堂有路你不走，学海无涯苦作舟！
 keywords:
 author: 王星云
 language:
