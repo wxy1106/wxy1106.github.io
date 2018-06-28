@@ -8,8 +8,15 @@ subtitle: blog of nebula
 description: 天堂有路你不走，学海无涯苦作舟
 keywords:
 author: 王星云
-language:
+language: zh-Hans
 timezone:
+avatar: /images/avatar.png
+
+# Search
+path: search.xml
+field: post
+format: html
+limit: 10000
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
