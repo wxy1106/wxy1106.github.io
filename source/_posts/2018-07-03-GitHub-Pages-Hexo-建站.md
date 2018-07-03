@@ -1,6 +1,7 @@
 ---
 title: GitHub Pages + Hexo 建站
 date: 2018-07-03 11:04:05
+categories: code
 tags:
 	- GitHub Pages
 	- Hexo
