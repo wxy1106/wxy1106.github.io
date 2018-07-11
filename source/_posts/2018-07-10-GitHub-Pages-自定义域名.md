@@ -1,7 +1,7 @@
 ---
 title: GitHub Pages 自定义域名
 date: 2018-07-10 16:38:40
-tags: GiHub Pages
+tags: GitHub Pages
 categories: code
 ---
 {% note default %}

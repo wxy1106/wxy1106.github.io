@@ -20,6 +20,10 @@ GitHub Pages是GitHub提供给开发者的一套静态站点托管服务，依�
 1. 免费服务器，不用担心成本或者过期（当然有一些容量限制，[参考](https://help.github.com/articles/what-is-github-pages/)）
 2. 主题以及样式可配置，专注内容，不用花过多精力在前端页面
 
+当然也有不可避免的缺点，比如不幸遇到维护 =_=
+
+{% asset_img git_down.png %}
+
 前因后果写到这，下面记录自己完整的搭建步骤，以及一些注意事项
 
 ## GitHub Page部分
