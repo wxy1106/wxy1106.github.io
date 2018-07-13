@@ -6,7 +6,7 @@ tags:
 	- GitHub Pages
 	- Hexo
 ---
-{% note default %}
+{% note info %}
 之前用的博客是找的Ruby on Rails框架源码[（GitHub地址）](https://github.com/wxy1106/xyblog)搭在了VPS上，自己维护代码和服务器都相对比较麻烦，正好VPS过期也正好最近有时间折腾，于是决定拿火了很久的GitHub Pages + Hexo来搭建一个新的个人博客
 {% endnote %}
 <!--more-->
