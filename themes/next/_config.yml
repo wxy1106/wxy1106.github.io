@@ -137,6 +137,8 @@ scheme: Gemini
 social:
   GitHub: https://github.com/wxy1106 || github
   E-Mail: mailto:xywang1106@163.com || envelope
+  Weibo: https://weibo.com/wxy1106 || weibo
+  Tencent: tencent://message/?uin=19763526 || qq
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -148,7 +150,7 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: true
   transition: false
 
 # Blog rolls
