@@ -124,7 +124,6 @@
   })
 }}
 
-
 {# Export some HEXO Configurations to Front-End #}
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
@@ -148,6 +147,17 @@
       labels: {{ theme.algolia_search.labels | json_encode }}
     }
   };
+</script>
+
+<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('输入密码签收') !== '{{ page.password }}'){
+                alert('好像不太对 =。=');
+                history.back();
+            }
+        }
+    })();
 </script>
 
 {# Canonical, good for google search engine (SEO) : https://support.google.com/webmasters/answer/139066 #}
