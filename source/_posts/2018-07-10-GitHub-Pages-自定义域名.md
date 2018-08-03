@@ -2,7 +2,7 @@
 title: GitHub Pages 自定义域名
 date: 2018-07-10 16:38:40
 tags: GitHub Pages
-categories: code
+categories: Code
 ---
 {% note info %}
 GitHub Pages的默认访问域名是`https://username.github.io`，如果用来搭建个人站点当然使用自己的域名也是不错的选择，本来GitHub Pages是支持自定义域名的，但是由于官方文档没按顺序步骤写，按文档操作会有很多遗落步骤和信息，所以自己搞了一遍把详细步骤记录下来
