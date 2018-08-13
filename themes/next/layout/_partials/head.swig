@@ -152,7 +152,7 @@
 <script>
     (function(){
         if('{{ page.password }}'){
-            if (prompt('输入密码签收') !== '{{ page.password }}'){
+            if (prompt('yes or no?') !== '{{ page.password }}'){
                 alert('好像不太对 =。=');
                 history.back();
             }
