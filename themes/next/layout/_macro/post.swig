@@ -204,10 +204,10 @@
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
+                 <i class="fa fa-bar-chart"></i>
                </span>
                {% if theme.post_meta.item_text %}
-                 <span class="post-meta-item-text">{{__('post.visitors')}}&#58;</span>
+                 <span class="post-meta-item-text">{{__('post.visitors')}}&nbsp;</span>
                {% endif %}
                  <span class="leancloud-visitors-count"></span>
              </span>
