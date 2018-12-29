@@ -152,8 +152,8 @@
 <script>
     (function(){
         if('{{ page.password }}'){
-            if (prompt('yes or no?') !== '{{ page.password }}'){
-                alert('好像不太对 =。=');
+            if (prompt('password?') !== '{{ page.password }}'){
+                alert('好像不太对');
                 history.back();
             }
         }
