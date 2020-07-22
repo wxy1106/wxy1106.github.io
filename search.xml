@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[今天涨了吗]]></title>
+    <url>%2F2020%2F07%2F22%2F%E4%BB%8A%E5%A4%A9%E6%B6%A8%E4%BA%86%E5%90%97%2F</url>
+    <content type="text"><![CDATA[今天涨了吧]]></content>
+      <tags>
+        <tag>Life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Netflix]]></title>
     <url>%2F2018%2F12%2F30%2FNetflix%2F</url>
     <content type="text"><![CDATA[包教包会，不会退钱！ 在国内网络环境下要使用Netflix需要搞定两件事，一是翻墙，二是注册Netflix帐号，第一个可以用钱解决，第二个也可以用钱解决 vpn翻墙 下载express vpn到这个地方express vpn选择自己平台的vpn软件并下载 完成安装并打开软件，输入激活码登录activation code：EQ1DWQVMZDUG5FEYM6T7MCE 默认LA节点，或者手动选择美国或香港节点，点击开关打开vpn 确定vpn连接成功 Netflix帐号 连接vpn后转到Netflix官网，输入帐号密码登录帐号：yunding3526239@163.com密码：gG123666 切换帐号到第四个头像 打开视频测试一下是否可以正常播放 Done]]></content>
@@ -25,7 +33,7 @@
   <entry>
     <title><![CDATA[Next个人配置清单]]></title>
     <url>%2F2018%2F08%2F13%2FNext%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95%2F</url>
-    <content type="text"><![CDATA[搭好博客后断断续续折腾到现在，发现自己其实并不喜欢写文章，真正热衷的是折腾来折腾去的过程，改图标、改颜色、改字体，尝试一些有趣但又没什么用的功能等等…时间一长就忘记改了什么、怎么改的，所以决定把修改的点都记录下来，以防下次想改回去还得去查别人的攻略。 配置清单一边翻commit记录，一边记下来 修改站点默认语言为中文_config.yml:language 修改头像_config.yml:avatar 开启「关于」标签next/_config.yml:about 开启本地搜索_config.yml:Searchnext/_config.yml:local_search 修改站点图标next/_config.yml:favicon 修改footer「主题」显示next/_config.yml:themenext/layout/_partials/footer.swig 修改社交图标，增加QQ、微博next/_config.yml:social, :social_icons 侧边栏左显next/_config.yml:siderbar 代码高亮主题next/_config.yml:highlight_theme 修改文章命名方式_config.yml:new_post_name 增加不蒜子统计next/_config.yml:busuanzi_countnext/layout/.../busuanzi-counter.swig 开启Leancloud统计next/_config.yml/leancloud_visitorsnext/languages/zh-Hans.yml:postnext/layout/_macro/post.swig 增加资源文件夹_config.yml:post_asset_folder 修改powered英文显示next/languages/zh-Hans.yml:footer 修改文章tag图标next/layout/_macro/post.swig 修改站点footer图标，增加动画效果next/layout/_partials/footer.swignext/_config.yml:iconnext/source/css/_common/components/footer/footer.styl 配置自定义域名访问source/CNAME 修改字体大小next/source/css/_common/components/header/menu.stylnext/source/css/_variables/Pisces.stylnext/source/css/_variables/base.styl 增加密码属性next/layout/_partials/head.swig 增加隐藏属性next/layout/index.swig 自定义小代码块样式next/source/css/custom.styl 自定义页面next/source/heart/ 增加「关于」页面next/_config.yml:aboutsource/about/index TODO List下面记录可能要做的（不包括写文章） 增加鼠标点击效果 增加一条狗 优化统计显示后开启 增加「关于」页面]]></content>
+    <content type="text"><![CDATA[博客搭好后修改的点都记录如下，以防下次想改回去还得翻别人的攻略。 配置清单 修改站点默认语言为中文_config.yml:language 修改头像_config.yml:avatar 开启「关于」标签next/_config.yml:about 开启本地搜索_config.yml:Searchnext/_config.yml:local_search 修改站点图标next/_config.yml:favicon 修改footer「主题」显示next/_config.yml:themenext/layout/_partials/footer.swig 修改社交图标，增加QQ、微博next/_config.yml:social, :social_icons 侧边栏左显next/_config.yml:siderbar 代码高亮主题next/_config.yml:highlight_theme 修改文章命名方式_config.yml:new_post_name 增加不蒜子统计next/_config.yml:busuanzi_countnext/layout/.../busuanzi-counter.swig 开启Leancloud统计next/_config.yml/leancloud_visitorsnext/languages/zh-Hans.yml:postnext/layout/_macro/post.swig 增加资源文件夹_config.yml:post_asset_folder 修改powered英文显示next/languages/zh-Hans.yml:footer 修改文章tag图标next/layout/_macro/post.swig 修改站点footer图标，增加动画效果next/layout/_partials/footer.swignext/_config.yml:iconnext/source/css/_common/components/footer/footer.styl 配置自定义域名访问source/CNAME 修改字体大小next/source/css/_common/components/header/menu.stylnext/source/css/_variables/Pisces.stylnext/source/css/_variables/base.styl 增加密码属性next/layout/_partials/head.swig 增加隐藏属性next/layout/index.swig 自定义小代码块样式next/source/css/custom.styl 自定义页面next/source/heart/ 增加「关于」页面next/_config.yml:aboutsource/about/index TODO List下面记录可能要做的（不包括写文章） 增加鼠标点击效果 增加一条狗 优化统计显示后开启 增加「关于」页面]]></content>
       <categories>
         <category>Code</category>
       </categories>
