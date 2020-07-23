@@ -82,7 +82,7 @@
 <meta name="description" content="天堂有路你不走，学海无涯苦作舟">
 <meta property="og:type" content="website">
 <meta property="og:title" content="XYBLOG">
-<meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Hexo/index.html">
 <meta property="og:site_name" content="XYBLOG">
 <meta property="og:description" content="天堂有路你不走，学海无涯苦作舟">
 <meta property="og:locale" content="zh-Hans">
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/Hexo/"/>
 
 
 
 
 
-  <title>标签: hexo | XYBLOG</title>
+  <title>标签: Hexo | XYBLOG</title>
   
 
 
@@ -209,16 +209,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-map">
-          <a href="/map/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-map"></i> <br />
-            
-            MAP
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -288,7 +278,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>hexo<small>标签</small>
+        <h1>Hexo<small>标签</small>
         </h1>
       </div>
 
@@ -300,9 +290,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/07/05/Hexo-博客备份/" itemprop="url">
+            <a class="post-title-link" href="/2018/08/13/Next个人配置清单/" itemprop="url">
               
-                <span itemprop="name">Hexo 博客备份</span>
+                <span itemprop="name">Next个人配置清单</span>
               
             </a>
         
@@ -310,9 +300,37 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-05T17:29:59+08:00"
-              content="2018-07-05" >
-          07-05
+              datetime="2018-08-13T15:34:50+08:00"
+              content="2018-08-13" >
+          08-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/07/03/GitHub-Pages-Hexo-建站/" itemprop="url">
+              
+                <span itemprop="name">GitHub Pages + Hexo 建站</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-07-03T11:04:05+08:00"
+              content="2018-07-03" >
+          07-03
         </time>
       </div>
 
@@ -1037,47 +1055,6 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-      $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
