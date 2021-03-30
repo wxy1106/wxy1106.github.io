@@ -82,7 +82,7 @@
 <meta name="description" content="天堂有路你不走，学海无涯苦作舟">
 <meta property="og:type" content="website">
 <meta property="og:title" content="XYBLOG">
-<meta property="og:url" content="http://yoursite.com/tags/Hexo/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
 <meta property="og:site_name" content="XYBLOG">
 <meta property="og:description" content="天堂有路你不走，学海无涯苦作舟">
 <meta property="og:locale" content="zh-Hans">
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/hexo/"/>
 
 
 
 
 
-  <title>标签: Hexo | XYBLOG</title>
+  <title>标签: hexo | XYBLOG</title>
   
 
 
@@ -278,7 +278,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Hexo<small>标签</small>
+        <h1>hexo<small>标签</small>
         </h1>
       </div>
 
@@ -290,37 +290,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/08/13/Next个人配置清单/" itemprop="url">
+            <a class="post-title-link" href="/2018/07/05/Hexo-博客备份/" itemprop="url">
               
-                <span itemprop="name">Next个人配置清单</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-13T15:34:50+08:00"
-              content="2018-08-13" >
-          08-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/03/GitHub-Pages-Hexo-建站/" itemprop="url">
-              
-                <span itemprop="name">GitHub Pages + Hexo 建站</span>
+                <span itemprop="name">Hexo 博客备份</span>
               
             </a>
         
@@ -328,9 +300,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-03T11:04:05+08:00"
-              content="2018-07-03" >
-          07-03
+              datetime="2018-07-05T17:29:59+08:00"
+              content="2018-07-05" >
+          07-05
         </time>
       </div>
 
@@ -481,7 +453,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1055,6 +1027,47 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+      $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
