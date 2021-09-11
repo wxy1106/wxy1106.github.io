@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[windows 系统重装]]></title>
+    <url>%2F2021%2F09%2F11%2Fwindows-%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[Windows 系统重装指南，重装会上瘾。 资源列表阿里云 重装前 系统镜像 cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso u盘工具 rufus-2.17 重装后软件工具 激活工具 MAS_1.4_Password_1234 DPI工具 Windows10_DPI_FIX ROG Armoury ArmouryCrateInstaller_3.1.0.0_20210408 Sublime https://51.ruyo.net/17264.html sublime_text_build_4113_x64_setup sublime_text QQLight QQ7.9Light RAR解压工具 WinRAR_x64_SC 视频播放器 PotPlayerSetup64 选择额外解码器安装 梯子 [https://www.v2aky.com/]https://www.v2aky.com/ 系统设置 刷新率 扩展模式 显示器1: 144Hz 显示器2: 60Hz 壁纸 照片查看器 照片查看器.reg office 卸载 SetupProd_OffScrub (文档)[https://support.microsoft.com/en-us/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8?ui=en-us&amp;rs=en-us&amp;ad=us] 安装 configuration-Office2019Enterprise .\setup.exe /configure .\configuration-Office2019Enterprise.xml 激活 MAS_1.4_Password_1234]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL max_connect_errors 报错]]></title>
+    <url>%2F2021%2F08%2F12%2FMySQL-max-connect-errors-%E6%8A%A5%E9%94%99%2F</url>
+    <content type="text"><![CDATA[一次关于MySQL max_connect_errors报错的排查记录 现象数据同步服务未正常工作，查看docker日志docker logs --tail 100输出报错信息1Mysql2::Error: Host &apos;10.xx.x.xxx&apos; is blocked because of many connection errors; 分析为应用服务器多次连接数据库服务器失败，导致应用服务器ip被ban 临时解决方案登录MySQL，使用flush hosts命令重置host的报错记录修改max_connect_errors参数，设置一个较大值12show variables like &apos;max_connect_errors&apos;;set global max_connect_errors = 1000; 重启应用服务后即可恢复 问题分析参考文章https://www.cnblogs.com/kerrycode/p/8405862.html说明MySQL会在performance_schema数据库下的host_cache表中记录客户端的访问情况，包括连接失败和密码登录失败等12use performance_schema;select * from host_cache where ip='10.xx.x.xxx' \G; 12345678910111213141516171819202122232425262728293031323334353637Connection id: 390771Current database: performance_schema*************************** 1. row *************************** IP: 10.xx.x.xxx HOST: NULL HOST_VALIDATED: YES SUM_CONNECT_ERRORS: 134 COUNT_HOST_BLOCKED_ERRORS: 0 COUNT_NAMEINFO_TRANSIENT_ERRORS: 0 COUNT_NAMEINFO_PERMANENT_ERRORS: 1 COUNT_FORMAT_ERRORS: 0 COUNT_ADDRINFO_TRANSIENT_ERRORS: 0 COUNT_ADDRINFO_PERMANENT_ERRORS: 0 COUNT_FCRDNS_ERRORS: 0 COUNT_HOST_ACL_ERRORS: 0 COUNT_NO_AUTH_PLUGIN_ERRORS: 0 COUNT_AUTH_PLUGIN_ERRORS: 0 COUNT_HANDSHAKE_ERRORS: 163 COUNT_PROXY_USER_ERRORS: 0 COUNT_PROXY_USER_ACL_ERRORS: 0 COUNT_AUTHENTICATION_ERRORS: 0 COUNT_SSL_ERRORS: 0 COUNT_MAX_USER_CONNECTIONS_ERRORS: 0COUNT_MAX_USER_CONNECTIONS_PER_HOUR_ERRORS: 0 COUNT_DEFAULT_DATABASE_ERRORS: 0 COUNT_INIT_CONNECT_ERRORS: 0 COUNT_LOCAL_ERRORS: 0 COUNT_UNKNOWN_ERRORS: 0 FIRST_SEEN: 2021-08-12 15:04:22 LAST_SEEN: 2021-08-12 15:43:13 FIRST_ERROR_SEEN: 2021-08-12 15:04:22 LAST_ERROR_SEEN: 2021-08-12 15:43:131 row in set (0,08 sec)ERROR: No query specified 其中SUM_CONNECT_ERRORS的值超过max_connect_errors值时，则会导致文章开头报错 根据文章测试 登录时输入密码错误并不会导致ERRORS次数增加 而尝试TCP连接且连接最终未成功时，则会导致ERRORS增加 问题修复服务器近期有启用端口扫描脚本，该脚本通过nc命令每隔10秒访问目标ip:端口以判断连通性 经验证该命令作用在MySQL对外服务端口上时，会导致SUM_CONNECT_ERRORS增加 其扫描原理是通过建立TCP连接来判断连通性，因此可增加参数-u建立UDP连接避免 或扫描22 ssh服务端口替代3306 MySQL服务端口即可解决问题]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[今天涨了吗]]></title>
+    <url>%2F2020%2F07%2F22%2Findex-today%2F</url>
+    <content type="text"><![CDATA[今天涨了吧]]></content>
+      <tags>
+        <tag>Life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Netflix]]></title>
+    <url>%2F2018%2F12%2F30%2FNetflix%2F</url>
+    <content type="text"><![CDATA[包教包会，不会退钱！ 在国内网络环境下要使用Netflix需要搞定两件事，一是翻墙，二是注册Netflix帐号，第一个可以用钱解决，第二个也可以用钱解决 vpn翻墙 下载express vpn到这个地方express vpn选择自己平台的vpn软件并下载 完成安装并打开软件，输入激活码登录activation code：EQ1DWQVMZDUG5FEYM6T7MCE 默认LA节点，或者手动选择美国或香港节点，点击开关打开vpn 确定vpn连接成功 Netflix帐号 连接vpn后转到Netflix官网，输入帐号密码登录帐号：yunding3526239@163.com密码：gG123666 切换帐号到第四个头像 打开视频测试一下是否可以正常播放 Done]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Netflix</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Office激活新手教程]]></title>
+    <url>%2F2018%2F11%2F09%2FOffice%E6%BF%80%E6%B4%BB%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[手把手教你激活Office，包教包会，不会退钱 ps：下面操作有任何问题不要犹豫请立刻联系IT部门 激活步骤 开机，如果已经开机跳过该步骤 右键点击开始菜单，选择Windows PowerShell(管理员)打开 复制粘贴下面命令到蓝色框框里（复制后右键点击即粘贴） 1cd &quot;C:\Program Files (x86)\Microsoft Office\Office16&quot; 回车执行，进入到Office安装目录 依次复制执行下面命令 123cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99cscript ospp.vbs /sethst:kms.library.hkcscript ospp.vbs /act 确保每一步都有 successful 提示 完成后重新打开Excel=&gt;文件=&gt;账户选项，可查看激活成功信息]]></content>
+      <categories>
+        <category>Work</category>
+      </categories>
+      <tags>
+        <tag>Office</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Next个人配置清单]]></title>
+    <url>%2F2018%2F08%2F13%2FNext%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95%2F</url>
+    <content type="text"><![CDATA[博客搭好后修改的点都记录如下，以防下次想改回去还得翻别人的攻略。 配置清单 修改站点默认语言为中文_config.yml:language 修改头像_config.yml:avatar 开启「关于」标签next/_config.yml:about 开启本地搜索_config.yml:Searchnext/_config.yml:local_search 修改站点图标next/_config.yml:favicon 修改footer「主题」显示next/_config.yml:themenext/layout/_partials/footer.swig 修改社交图标，增加QQ、微博next/_config.yml:social, :social_icons 侧边栏左显next/_config.yml:siderbar 代码高亮主题next/_config.yml:highlight_theme 修改文章命名方式_config.yml:new_post_name 增加不蒜子统计next/_config.yml:busuanzi_countnext/layout/.../busuanzi-counter.swig 开启Leancloud统计next/_config.yml/leancloud_visitorsnext/languages/zh-Hans.yml:postnext/layout/_macro/post.swig 增加资源文件夹_config.yml:post_asset_folder 修改powered英文显示next/languages/zh-Hans.yml:footer 修改文章tag图标next/layout/_macro/post.swig 修改站点footer图标，增加动画效果next/layout/_partials/footer.swignext/_config.yml:iconnext/source/css/_common/components/footer/footer.styl 配置自定义域名访问source/CNAME 修改字体大小next/source/css/_common/components/header/menu.stylnext/source/css/_variables/Pisces.stylnext/source/css/_variables/base.styl 增加密码属性next/layout/_partials/head.swig 增加隐藏属性next/layout/index.swig 自定义小代码块样式next/source/css/custom.styl 自定义页面next/source/heart/ 增加「关于」页面next/_config.yml:aboutsource/about/index TODO List下面记录可能要做的（不包括写文章） 增加鼠标点击效果 增加一条狗 优化统计显示后开启 增加「关于」页面]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git 初始化配置]]></title>
+    <url>%2F2018%2F07%2F21%2FGit-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[Git相关操作可以说贯穿一个项目始终，拿到一个新的环境第一步就需要搞定Git配置（毕竟代码在仓库里），下面记录一些必要的或常用的配置（所有操作在Git Bash中完成） SSH Key 配置首先检查下是否已经生成过密钥1ls -al ~/.ssh 如果已经存在，会看到如下字样文件 id_rsa id_rsa.pub 否则需要生成新的密钥1ssh-keygen -t rsa -C &quot;your.email@example.com&quot; -b 4096 执行后会提示输入文件保存路径和密码 这里选择默认的路径，密码也置为空，因此直接按3次回车即可 生成后复制密钥1cat ~/.ssh/id_rsa.pub | clip 配置密钥到GitHub 点击用户头像 =&gt; Settings =&gt; Add SSH key =&gt; 输入Tittle =&gt; 复制保存上一步的密钥 Git Config设置用户名和邮箱12git config --global user.name &quot;John Doe&quot;git config --global user.email johndoe@example.com 设置命令别名，简化输入12345git config --global alias.co checkoutgit config --global alias.br branchgit config --global alias.ci commitgit config --global alias.st statusgit config --global alias.last &apos;log -1 HEAD&apos; 详细设置列表可以通过git config --list查看]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[测试测试]]></title>
+    <url>%2F2018%2F07%2F14%2Fa-letter%2F</url>
+    <content type="text"><![CDATA[测试用视频测试This is a vedio test 这里是第一段 这是一个视频测试]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[GitHub Pages 自定义域名]]></title>
+    <url>%2F2018%2F07%2F10%2FGitHub-Pages-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[GitHub Pages的默认访问域名是https://username.github.io，如果用来搭建个人站点当然使用自己的域名也是不错的选择，本来GitHub Pages是支持自定义域名的，但是由于官方文档没按顺序步骤写，按文档操作会有很多遗落步骤和信息，所以自己搞了一遍把详细步骤记录下来 GitHub Pages 配置其实GitHub的配置只需要一步，在本地Hexo目录的source文件夹里新建CNAME文件，注意没有后缀 关于CNAME文件务必不能按官方文档放在项目根目录，不然每次hexo d部署都会被覆盖掉 CNAME中写入自己的域名，支持两种格式12- nebula.com- www.nebula.com 根据个人偏好两者只能选其一，如果使用nebula.com，那么配置完成后不论输入nebula.com还是www.nebula.com，最终都会跳转显示为nebula.com，反之亦然 保存好CNAME执行hexo g -d部署 打开GitHub仓库会看到CNAME已经被上传到master分支的根目录了 同时Settings中GitHub Pages标签里的域名绑定信息也会被修改为CNAME里的值，可以在这里确认一遍 域名DNS解析转到域名注册商的控制台，以阿里云-万网为例，添加如下解析 这里的配置实现了www.nebula.com和nebula.com两种方式都能解析到GitHub Pages 首先是www.nebula.com，需要添加CNMAE记录类型，主机记录选择www，对应记录值设为wxy1106.github.io 注意三者是严格对应的，详细文档可以参考：https://help.github.com/articles/setting-up-a-www-subdomain/ 其次是nebula.com，需要添加A记录类型，主机记录选择@，对应记录值设为如下4个IP 185.199.111.153 185.199.110.153 185.199.109.153 185.199.108.153 这4个IP是映射到GitHub Pages服务器的，大家都一样照抄就行，详细文档可以参考：https://help.github.com/articles/setting-up-an-apex-domain 配置完DNS解析视情况等待10分钟或者更久，可以在bash中ping自己的域名来检验，如果能ping通即解析生效，这时就可以访问域名来打开自己的GitHub Page了]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>GitHub Pages</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo 博客备份]]></title>
+    <url>%2F2018%2F07%2F05%2FHexo-%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%2F</url>
+    <content type="text"><![CDATA[使用Hexo建站写文章早晚会遇到一个问题，因为Hexo环境和Markdown文章都是保存在本地的，如果需要换台电脑写文章，那么你需要重新搭建环境，并且拷贝原来项目目录到新的电脑，而且换一次电脑就要重复一次，非常繁琐。 更极端的情况是突然有一天硬盘说坏就坏掉了，即使你能重新部署好站点（参考上一篇），但所有之前写过的文章都已经随硬盘消失了。 Hexo官方文档并没有给出备份站点和文章的方法，得益于机智的网友，下面给出一个优雅的解决方案 备份方案实现备份依赖下面两个原理 我们写文章或者修改配置都是对项目源码的修改，执行hexo g命令才会渲染生成前台页面 执行hexo d命令会将渲染后的静态页面文件会提交到GitHub Pages的master分支保存和显示 显然，备份的目的在于将完整源码备份，这里需要用到一个新的分支（区别于master分支），将每次写文章或者修改配置后的源码提交到这个分支，而hexo d则会按以往方式将静态页面提交到master分支，这样就能将源码和静态文件完美区分开，并都保存到了站点的GitHub仓库中 完成上面操作就可以保证不论何时何地都可以拉取远程仓库的站点源码到本地，修改后再通过hexo g -d把静态页面发布到GitHub Page 原理解释完，具体实现步骤如下 新建分支在项目主页点击Branch，输入分支名称如hexo，点击Create 点击Setting下的Branch标签，设置hexo为默认分支 初始化分支代码新建一个站点文件夹，克隆项目仓库到本地12mkdir bloggit clone git@github.com:username/username.github.io.git blog 拷贝原Hexo文件夹中的文件或目录到新的站点文件夹下，只需要如下几个： _config.yml：站点配置文件 themes/：主题文件夹 source：资源文件夹，包括博文 scffolds/：文章模板 package.json：安装包配置 .gitignore：如题 删除/themes/next/.git/文件夹1rm -rf /themes/next/.git/ 安装软件包12npm installnpm install hexo-deployer-git 生成并部署站点，这一步会将静态页面提交到master分支1hexo g -d 提交源码到hexo分支123git add .git ci -m &apos;backup init&apos;git push 修改完成上面步骤站点就具有了备份的条件，每一次写文章或对站点做了修改后，需要执行上一节最后两步来完成备份 生成并部署 1hexo g -d 提交源码 123git add .git ci -m &apos;commit msg&apos;git push 迁移如果更换了电脑或者环境，按以下步骤操作 安装Git和Node.js 配置SSH Key（参考） 克隆远程仓库到本地 git clone git@github.com:username/username.github.io.git blog 安装Hexo及其它软件包123npm install -g hexo-clinpm installnpm install install hexo-deployer-git 完成后即可继续撰写和发布文章了]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GitHub Pages + Hexo 建站]]></title>
+    <url>%2F2018%2F07%2F03%2FGitHub-Pages-Hexo-%E5%BB%BA%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[之前用的博客是找的Ruby on Rails框架源码（GitHub地址）搭在了VPS上，自己维护代码和服务器都相对比较麻烦，正好VPS过期也正好最近有时间折腾，于是决定拿火了很久的GitHub Pages + Hexo来搭建一个新的个人博客 简介GitHub Pages是GitHub提供给开发者的一套静态站点托管服务，依托于GitHub repository我们可以把自己的静态页面发布到GitHub的服务器上，其实也就是repository主页的另一种展现形式 有了托管服务相应的我们还需要一个工具来将写好的Markdown文章渲染成静态页面，同时完成博文的管理和发布等等任务，常用的博客框架有Jekyll和Hexo，一般会采用后者，据说是速度更快而且主题更丰富 因此相比自己搭建和维护博客，采用这一套方案主要有这么些优势： 免费服务器，不用担心成本或者过期（当然有一些容量限制，参考） 主题以及样式可配置，专注内容，不用花过多精力在前端页面 当然也有不可避免的缺点，比如不幸遇到维护 =_= 前因后果写到这，下面记录自己完整的搭建步骤，以及一些注意事项 GitHub Page部分新建GitHub Page准确的说是新建一个GitHub repository，以username.github.io命名，注意username需要保持与你的GitHub用户名一致 新建成功过后，在项目主页点击Settings可以看到GitHub Pages栏目会提示站点已经发布到了https://username.github.io/ 此时打开这个地址可以看到你的默认主页，理论上你已经拥有了一个博客站点，只是里面什么都没有 第一篇Hello World往博客中添加或修改内容是以Git pull/push的方式进行的，首先需要安装Git客户端将站点源码clone到本地1git clone https://github.com/username/username.github.io 如果你想修改默认的主页12cd username.github.ioecho &quot;Hello World&quot; &gt; index.html 将修改push到GitHub123git add .git commit -m &quot;Initial commit&quot;git push -u origin master 然后再打开你的主页，就可以看到修改后的主页了 到这一步GitHub Page相关的设置其实就已经完成了，下面会使用Hexo来替代上述Git pull/push的方式发布文章和管理站点，完成下面这一步后你才会获得一个真正的个人博客 Hexo部分安装HexoHexo安装之前需要先安装两个软件 Git（上一步已经安装过了） Node.js 安装好后Windows用户可以在Git Bash中输入下面指令安装Hexo1npm install -g hexo-cli 建站进入站点项目目录，初始化Hexo123cd username.github.iohexo initnpm install 本地发布初始化Hexo过后即可在本地发布内容测试了，首先生成静态文件1hexo generate (hexo g) 然后启动本地服务1hexo server (hexo s) 默认情况下，本地访问地址为http://localhost:4000/，访问这个页面你会看到Hexo默认的一篇Hello World文章，并且你的博客出现了背景图片和布局，这些都是Hexo提供的主题功能，当然这个默认主题（Landscape）还比较粗糙，后面会写到如何更换和配置主题 远程发布我们最终目的是将站点内容包括文章发布到GitHub Page上，Hexo提供了非常简单的配置方案 首先安装hexo-deployer-git1npm install hexo-deployer-git --save 然后修改站点配置文件_config.yml,设置如下参数1234deploy: type: git repo: git@github.com:username/username.github.io.git branch: master 注意参数的缩进以及冒号后的空格需要保持一致，完成后执行部署命令1hexo deploy (hexo d) 此时Hexo会将渲染后的页面提交到GitHub上，成功后你会看到如下提示123To git@github.com:username/username.github.io.git a1fc800..43f00a0 HEAD -&gt; masterINFO Deploy done: git 打开你的站点链接，此时你会发现之前在本地预览的站点内容已经出现在了GitHub Page上 到这一步你的个人博客就已经搭建起来了，当然搭建起来和正式发布第一篇博文之间还有很多有趣的事情可以做，留到下一篇再讲]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>GitHub Pages</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
