@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[windows 系统重装]]></title>
     <url>%2F2021%2F09%2F11%2Fwindows-%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[Windows 系统重装指南，重装会上瘾。 资源列表阿里云 重装前 系统镜像 cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso u盘工具 rufus-2.17 重装后软件工具 激活工具 MAS_1.4_Password_1234 DPI工具 Windows10_DPI_FIX ROG Armoury ArmouryCrateInstaller_3.1.0.0_20210408 Sublime https://51.ruyo.net/17264.html sublime_text_build_4113_x64_setup sublime_text QQLight QQ7.9Light RAR解压工具 WinRAR_x64_SC 视频播放器 PotPlayerSetup64 选择额外解码器安装 梯子 [https://www.v2aky.com/]https://www.v2aky.com/ 系统设置 刷新率 扩展模式 显示器1: 144Hz 显示器2: 60Hz 壁纸 照片查看器 照片查看器.reg office 卸载 SetupProd_OffScrub (文档)[https://support.microsoft.com/en-us/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8?ui=en-us&amp;rs=en-us&amp;ad=us] 安装 configuration-Office2019Enterprise .\setup.exe /configure .\configuration-Office2019Enterprise.xml 激活 MAS_1.4_Password_1234]]></content>
+    <content type="text"><![CDATA[Windows 系统重装指南，重装会上瘾。 资源列表阿里云 重装前 系统镜像 cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso u盘工具 rufus-2.17 重装后软件工具 激活工具 MAS_1.4_Password_1234 DPI工具 Windows10_DPI_FIX ROG Armoury ArmouryCrateInstaller_3.1.0.0_20210408 Sublime https://51.ruyo.net/17264.html sublime_text_build_4113_x64_setup sublime_text QQLight QQ7.9Light RAR解压工具 WinRAR_x64_SC 视频播放器 PotPlayerSetup64 选择额外解码器安装 梯子 https://www.v2aky.com/ 系统设置 刷新率 扩展模式 显示器1: 144Hz 显示器2: 60Hz 壁纸 照片查看器 照片查看器.reg office 卸载 SetupProd_OffScrub 文档 安装 configuration-Office2019Enterprise .\setup.exe /configure .\configuration-Office2019Enterprise.xml 激活 MAS_1.4_Password_1234]]></content>
   </entry>
   <entry>
     <title><![CDATA[MySQL max_connect_errors 报错]]></title>
